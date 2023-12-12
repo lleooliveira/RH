@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indicadores de Resultados RH</title>
+    <style>
+        body {
+            overflow: hidden;
+            background-color: black;
+            margin: 0; /* Remove margens padrão */
+            padding: 0; /* Remove preenchimentos padrão */
+        }
+        html, body {
+            height: 100%; /* Faz com que o HTML e o body ocupem toda a altura da tela */
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o contêiner */
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove a borda do iframe */
+        }
+        .telacheia {
+            padding: 5px 5px;
+            background-color: rgba(123, 123, 123, 0.0);
+            border: none;
+        }
+        #centralizar, #centralizar2 {
+            position: absolute;
+            top: 2%;
+            left: 90.5%;
+            transform: translate(-50%, -50%);
+        }
+        #centralizar2 {
+            left: 92%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Indicadores de Resultados de Recursos Humanos</h1>
-    <iframe title="Indicadores_Resultados_RH" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=95987d16-cb88-4e3d-a9a4-992379c7aedf&autoAuth=true&ctid=ef215a11-96e5-4203-8b4e-a8ae1bbfcc43" frameborder="0" allowFullScreen="true"></iframe>
+    <script>
+        var elem = document.documentElement;
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { /* Safari */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE11 */
+                document.msExitFullscreen();
+            }
+        }
+    </script>
+    <div id="centralizar">
+        <button class="telacheia" onclick="openFullscreen();">
+            <font size="1" color="#FFFFFF">▲</font>
+        </button>
+    </div>
+    <div id="centralizar2">
+        <button class="telacheia" onclick="closeFullscreen();">
+            <font size="1" color="#FFFFFF">▼</font>
+        </button>
+    </div>
+    <div class="iframe-container">
+        <iframe class="ajuste" title="People Analytics" src="BITV.html" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
 </body>
 </html>
