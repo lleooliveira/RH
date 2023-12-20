@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="300" />
+    <!-- Meta tag de atualização automática comentada
+    <meta http-equiv="refresh" content="300" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
     <title>Índices</title>
@@ -34,30 +35,8 @@
 </head>
 <body>
     <div class="slideshow-container">
-        <iframe class="mySlides" src="https://app.powerbi.com/reportEmbed?reportId=95987d16-cb88-4e3d-a9a4-992379c7aedf&autoAuth=true&ctid=ef215a11-96e5-4203-8b4e-a8ae1bbfcc43" allowFullScreen="true"></iframe>
+        <iframe class="mySlides" src="https://app.powerbi.com/view?r=eyJrIjoiMzE0ZDcxMmMtNjhiYS00OGIwLTgyYzctOGRhZThmYzQ4MWI4IiwidCI6ImVmMjE1YTExLTk2ZTUtNDIwMy04YjRlLWE4YWUxYmJmY2M0MyJ9&pageName=ReportSection904a92b143f590a8fcee"></iframe>
         <!-- Outros iframes... -->
     </div>
-
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {    
-            var i;    
-            var slides = document.getElementsByClassName("mySlides"); 
-
-            for (i = 0; i < slides.length; i++) {
-               slides[i].style.display = "none";    
-            }    
-
-            if (slideIndex >= slides.length) {
-               slideIndex = 0;
-            }    
-
-            slides[slideIndex].style.display = "block";
-            setTimeout(showSlides, 240000); // Muda o slide a cada 240 segundos
-            slideIndex++; 
-        }
-    </script>
 </body>
 </html>
